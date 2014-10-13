@@ -12,7 +12,9 @@ class ShoutsController < ApplicationController
     if shout.save
       redirect_to shouts_path
     else
-      render :new
+      @shout = Shout.new
+      @shouts = Shout.all
+      render :index 
     end
   end
 
