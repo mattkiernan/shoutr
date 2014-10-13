@@ -5,6 +5,10 @@ class ShoutsController < ApplicationController
   def index
     @shouts = Shout.all
     @shout = Shout.new
+    @users = User.all
+    @following_relationships = FollowingRelationship.new
+    @users_i_follow = current_user.followed_users 
+    @users_i_do_not_follow = User.where.not(id: current_user.followed_users)
   end
 
   def create
