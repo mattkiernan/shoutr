@@ -8,7 +8,5 @@
 </div>
 <h3>Shouts</h3>
 <ul>
-  <% current_user.timeline.each do |shout| %>
-    <li><%= shout.user.email %> - <%= shout.body %></li>
-  <% end %>
+  <%= render @timeline %>
 </ul>
