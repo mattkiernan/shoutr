@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
+  def index
+    @users = User.where.not(id: current_user.id) 
+    @following_relationship = FollowingRelationship.new
+  end
+
+
   def new
     @user = User.new
   end

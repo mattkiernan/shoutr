@@ -15,7 +15,6 @@
 <h3>Users I do not follow</h3>
 <ul>
   <% @users_i_do_not_follow.each do |user| %>
-    <li><%= user.email %><%= button_to "Follow", [user, @following_relationships] %></li>
   <% end %>
 </ul>
 <h3>Shouts</h3>
