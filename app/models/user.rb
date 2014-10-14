@@ -27,4 +27,10 @@ class User < ActiveRecord::Base
     followed_users.destroy(user_to_unfollow)
   end
 
+  def timeline
+    timeline_users = followed_user_ids + [id]
+    Shout.where(user_id: timeline_users).order('created_at desc').limit(20)
+    
+  end
+
 end
