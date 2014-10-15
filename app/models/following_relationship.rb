@@ -1,5 +1,6 @@
 class FollowingRelationship < ActiveRecord::Base
   belongs_to :followed_user, class_name: "User"
+  belongs_to :follower, class_name: "User"
 
   validate :users_can_not_follow_themselves
 

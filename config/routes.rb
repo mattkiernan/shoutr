@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :image_subjects, only: [:new, :create]
 
+  resources :followers, only: [:index]
+
 end
