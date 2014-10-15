@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   resources :shouts, only: [:new, :create, :show,:index]
 
+  resources :text_subjects, only: [:new, :create]
+
 end

@@ -30,7 +30,10 @@ class User < ActiveRecord::Base
   def timeline
     timeline_users = followed_user_ids + [id]
     Shout.where(user_id: timeline_users).order('created_at desc').limit(20)
-    
+  end
+
+  def body=(new_body)
+   self[:body] = new_body.upcase
   end
 
 end
