@@ -6,6 +6,11 @@
     <%= form.submit "Shout!" %>
   <% end %>
 </div>
+<div>
+  <%= form_for @image_subject do |form| %>
+    <%= form.text_field :url %>
+    <%= form.submit "Shout!" %>
+  <% end %>
 <h3>Shouts</h3>
 <ul>
   <%= render @timeline %>

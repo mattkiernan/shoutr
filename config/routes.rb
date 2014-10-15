@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :text_subjects, only: [:new, :create]
 
+  resources :image_subjects, only: [:new, :create]
+
 end

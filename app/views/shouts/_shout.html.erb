@@ -1,1 +1,1 @@
-<li><%= shout.user.email %> - <%= shout.subject.body %>  <em>(<%= time_ago_in_words shout.created_at %>)</em></li>
+<li><%= shout.user.email %> - <%= render shout.subject %>  <em><%= time_ago_in_words shout.created_at %></em></li>
