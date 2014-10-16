@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<h1><%= link_to "Shoutr", root_path %></h1>
 <div>
   <% if signed_in? %>
     <div><%= current_user.email %></div>

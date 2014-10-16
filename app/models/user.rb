@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
+  validates :username, uniqueness: true
 
   def follow(other_user)
     followed_users << other_user
@@ -40,6 +41,10 @@ class User < ActiveRecord::Base
 
   def body=(new_body)
    self[:body] = new_body.upcase
+  end
+
+  def to_param
+    username
   end
 
 end

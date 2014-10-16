@@ -1,5 +1,7 @@
 class ShoutsController < ApplicationController
 
+  helper BoldHelper
+
   before_action :require_login
 
   def index

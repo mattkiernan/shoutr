@@ -2,12 +2,14 @@
 
 <div>
   <%= form_for @text_subject do |form| %>
+    <%= form.label :body, "Text: " %>
     <%= form.text_field :body %>
     <%= form.submit "Shout!" %>
   <% end %>
 </div>
 <div>
   <%= form_for @image_subject do |form| %>
+    <%= form.label :body, "Image: " %>
     <%= form.text_field :url %>
     <%= form.submit "Shout!" %>
   <% end %>
