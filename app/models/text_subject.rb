@@ -1,5 +1,5 @@
 class TextSubject < ActiveRecord::Base
-  belongs_to :shout
+  has_one :shout, as: :subject
 
   validates :body, presence: true
 

@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :followers, only: [:index]
 
+  resource :search, only: [:show]
+
 end

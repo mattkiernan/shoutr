@@ -11,6 +11,10 @@
 <div>
   <% if signed_in? %>
     <div><%= current_user.email %></div>
+    <%= form_tag :search, method: :get do %>
+      <%= text_field_tag :query %>
+      <%= submit_tag "SEARCH" %>
+    <% end %>
     <%= link_to "Users", users_path %>
     <%= link_to "Followers", followers_path %>
     <%= button_to "Sign out", session_path, method: :delete %>
