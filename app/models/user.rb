@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :shouts
+  has_many :shouts, dependent: :destroy
 
   has_many :following_user_relationships,
     foreign_key: :follower_id,
