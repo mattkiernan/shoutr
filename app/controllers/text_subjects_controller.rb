@@ -1,7 +1,5 @@
 class TextSubjectsController < ApplicationController
 
-  helper Boldhelper
-
   def create
     text_subject = TextSubject.new(text_subject_params)
     if text_subject.save
