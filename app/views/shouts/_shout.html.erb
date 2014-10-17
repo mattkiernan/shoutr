@@ -1,1 +1,7 @@
-<li><%= shout.user.email %> - <%= render shout.subject %>  <em><%= time_ago_in_words shout.created_at %></em></li>
+<li><%= shout.user.email %> - <%= render shout.subject %>  <em><%= time_ago_in_words shout.created_at %></em>
+
+<% if current_user.favorited_shouts.include?(shout) %>
+  <%= button_to "Unfavorite", shout_favorite_path(shout), method: :delete %>
+<% else %>
+    <%= button_to "Favorite", shout_favorite_path(shout) %></li>
+<% end %>

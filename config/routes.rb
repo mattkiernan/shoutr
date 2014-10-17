@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   root("shouts#index")
 
-  resources :shouts, only: [:new, :create, :show,:index]
+  resources :shouts, only: [:new, :create, :show,:index] do
+    resource :favorite, only: [:create, :destroy]
+  end
+   
 
   resources :text_subjects, only: [:new, :create]
 

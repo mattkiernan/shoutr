@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
 
   has_many :followers, through: :follower_user_relationships
 
+  has_many :favorites
+  has_many :favorited_shouts, through: :favorites, source: :shout
+
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
   validates :username, uniqueness: true
