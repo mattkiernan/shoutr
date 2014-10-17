@@ -2,7 +2,12 @@
 
 <%= render "follow_button", user: @user %>
 
+<h3><%= @user.username %> follows:</h3>
+
 <ul>
   <%= render @followed_users %>
 </ul>
 
+<h3><%= @user.username%>'s favorite shouts</h3>
+
+<%= render @user.favorited_shouts %>

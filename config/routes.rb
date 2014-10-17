@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :shouts, only: [:new, :create, :show,:index] do
     resource :favorite, only: [:create, :destroy]
   end
-   
 
   resources :text_subjects, only: [:new, :create]
 
@@ -20,6 +19,5 @@ Rails.application.routes.draw do
 
   resource :search, only: [:show]
 
-  get "/:username", to: "users#show", as: "user" 
-
+  get "/:username", to: "users#show", as: "user"
 end
