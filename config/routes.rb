@@ -19,5 +19,7 @@ Rails.application.routes.draw do
 
   resource :search, only: [:show]
 
+  resource :direct_shouts, only: [:show]
+
   get "/:username", to: "users#show", as: "user"
 end

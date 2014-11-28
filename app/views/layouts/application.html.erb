@@ -17,6 +17,7 @@
     <% end %>
     <%= link_to "Users", users_path %>
     <%= link_to "Followers", followers_path %>
+    <%= link_to "Direct Shouts", direct_shouts_path %>
     <%= button_to "Sign out", session_path, method: :delete %>
   <% else %>
     <%= link_to "Sign in", new_session_path %>
