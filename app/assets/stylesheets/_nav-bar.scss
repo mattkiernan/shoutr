@@ -89,3 +89,22 @@ a#sign-out-button{
   padding-top:2px;
 }
 
+#shout-link{
+  float: right;
+  background-color: #009999;
+  padding: 3px 10px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+#shout-link:hover{
+  background-color: #008c8c;
+}
+
+a#shout-link:hover{
+  color: #ffffff;
+}
+
+a#shout-link{
+  color: #ffffff;
+}

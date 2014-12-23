@@ -1,6 +1,5 @@
 <div id="nav">
-  <% if signed_in? %>
-    <div id="logged-in-nav">
+  <div id="logged-in-nav">
     <div id="logged-in-list">
       <ul>
         <li><%= link_to "SHOUTR", root_path, class:"app-name" %></li>
@@ -10,17 +9,12 @@
       </ul>
     </div>
     <div id="logged-in-actions">
+      <%= link_to "Shout", root_path, id:"shout-link" %>
       <%= link_to "Sign-out", session_path, method: :delete, id:"sign-out-button" %>
-    <%= form_tag :search, method: :get, id:"nav-form" do %>
-      <%= text_field_tag :query %>
+      <%= form_tag :search, method: :get, id:"nav-form" do %>
+        <%= text_field_tag :query %>
       <%= submit_tag "O", id:"nav-search-button" %>
     <% end %>
     </div>
-  <% else %>
-    <ul>
-      <li><%= link_to "Sign in", new_session_path %></li>
-      <li><%= link_to "Sign up", new_user_path %></li>
-    </ul>
-  <% end %>
-</div>
+  </div>
 </div>
