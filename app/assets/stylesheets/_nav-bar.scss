@@ -1,0 +1,92 @@
+#nav{
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 1px #bababa;
+  min-width: 400px;
+}
+
+#logged-in-nav{
+  @include outer-container;
+  padding: 10px;
+  a{
+    color: #66757F;
+    font-weight: bold;
+  }
+}
+
+#logged-in-nav a:hover{
+  color: #009999;
+}
+
+#logged-in-list{
+  float: left;
+  padding-top: 2.5px;
+  li{
+    display: inline;
+    padding-left: 30px;
+  }
+}
+
+#logged-in-actions{
+  float: right;
+  display: inline;
+}
+
+#nav-form{
+  display: inline;
+  float: right;
+}
+
+#query{
+  width: 200px;
+  float: left;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  height: 30px;
+}
+
+input#query{
+  padding-right: 33px;
+  padding-left: 3px;
+  height: 30px;
+}
+
+#nav-search-button{
+  height: 26px;
+  margin: 2px;
+  font-size: 10px;
+  position: relative;;
+  right: 33px;
+}
+
+.username{
+  font-size: 12px;
+}
+
+.app-name{
+  padding: 0px 30px;
+  font-weight: bold;
+  color: #66757F;
+}
+
+#sign-out-button{
+  display: inline;
+  float: right;
+  height: 30px;
+  padding: 0px 40px;
+  background-color: #009999;
+}
+
+#sign-out-button:hover{
+  background-color: #008c8c;
+}
+
+a#sign-out-button:hover{
+  color: white;
+}
+
+a#sign-out-button{
+  color: #ffffff;
+  padding-top:2px;
+}
+
