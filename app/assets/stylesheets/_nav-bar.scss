@@ -22,7 +22,7 @@
   padding-top: 2.5px;
   li{
     display: inline;
-    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -60,11 +60,10 @@ input#query{
 }
 
 .username{
-  font-size: 12px;
+  font-weight: bold;
 }
 
 .app-name{
-  padding: 0px 30px;
   font-weight: bold;
   color: #66757F;
 }

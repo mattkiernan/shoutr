@@ -1,7 +1,10 @@
-<li><%= shout.user.email %> - <%= render shout.subject %>  <em><%= time_ago_in_words shout.created_at %></em>
+<div class="timeline">
+  <li><span class="username"><%= shout.user.username %></span> - <em><%= time_ago_in_words shout.created_at %> ago</em></li>
+  <li><%= render shout.subject %></li>
 
-<% if current_user.favorited_shouts.include?(shout) %>
-  <%= button_to "Unfavorite", shout_favorite_path(shout), method: :delete %>
-<% else %>
+  <% if current_user.favorited_shouts.include?(shout) %>
+    <%= button_to "Unfavorite", shout_favorite_path(shout), method: :delete %>
+  <% else %>
     <%= button_to "Favorite", shout_favorite_path(shout) %></li>
-<% end %>
+  <% end %>
+</div>
