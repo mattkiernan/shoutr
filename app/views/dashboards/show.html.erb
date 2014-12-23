@@ -1,0 +1,23 @@
+<%= render "layouts/shout" %>
+<div id="dashboard-content">
+  <div class="follower-section">
+    <div class="follower-count">
+      <ul>
+        <li>followers <span class="count"><%= current_user.followers.count %></span></li>
+        <li>following <span class="count"><%= current_user.followed_users.count %></span></li>
+        <li>shouts <span class="count"><%= current_user.shouts.count %></span></li>
+      </ul>
+    </div>
+    <div class="follower-list">
+      <ul>
+        <%= render @users %>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline">
+    <ul>
+      <%= render @timeline %>
+      <%= paginate @timeline %>
+    </ul>
+  </div>
+</div>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resource :following_relationship, only: [:create, :destroy]
   end
 
-  root("shouts#index")
+  root("dashboards#show")
 
   resources :shouts, only: [:new, :create, :show,:index] do
     resource :favorite, only: [:create, :destroy]
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   resource :search, only: [:show]
 
   resource :direct_shouts, only: [:show]
+
+  resource :dashboard, only: [:show]
 
   get "/:username", to: "users#show", as: "user"
 end

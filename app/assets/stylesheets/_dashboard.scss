@@ -1,0 +1,24 @@
+.follower-section{
+  @include span-columns(3 of 12);
+  background-color: #ffffff;
+}
+
+.follower-list, .follower-count{
+  border: 1px solid #B1BBC3;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+}
+
+.follower-count{
+  padding-right: 60px;
+  font-weight: bold;
+}
+
+#dashboard-content{
+  margin-top: 20px;
+}
+
+.count{
+  float: right;
+}

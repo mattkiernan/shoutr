@@ -1,6 +1,10 @@
 .timeline{
-  margin-top: 5px;
+  @include span-columns(9 of 12);
+}
+
+.shout{
   padding: 20px;
+  margin-bottom: 5px;
   background-color: #ffffff;
   border: 1px solid #B1BBC3;
 }
