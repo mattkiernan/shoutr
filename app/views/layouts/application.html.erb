@@ -7,9 +7,7 @@
 <%= csrf_meta_tags %>
 </head>
 <body>
-<% if signed_in? %>
-  <%= render "layouts/nav_bar" %>
-<% end %>
+<%= render "layouts/nav_bar" %>
 <div class="wrapper">
   <%= yield %>
 </div>

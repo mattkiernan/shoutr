@@ -1,13 +1,26 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div>
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+<div class="homescreen">
+  <div class="homescreen-message">
+    <h1>Keep up with Shoutr</h1>
+    <div class="message">
+      <p>Stay up to date with friends and thought-leaders.</p>
+      <p>Share updates instantly.</p>
+      <p>Use the provided guest credentials or <%=link_to "sign-up",
+        new_user_path %> for free.</p>
+    </div>
   </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="sign-in-form">
+    <%= form_for :session, url: session_path do |form| %>
+      <div>
+      <%= form.label :username %>
+      <%= form.text_field :username, value:"guest" %>
+    </div>
+    <div>
+      <%= form.label :password %>
+      <%= form.password_field :password, value:"password" %>
+    </div>
+    <div>
+      <%= form.submit "Sign in" %>
+    </div>
+  <% end %>
   </div>
-  <div>
-    <%= form.submit "Sign in" %>
-  </div>
-<% end %>
+</div>
