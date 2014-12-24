@@ -10,8 +10,8 @@
       </ul>
     </div>
     <div id="logged-in-actions">
-      <%= link_to "Shout", root_path, id:"shout-link" %>
       <%= link_to "Sign-out", session_path, method: :delete, id:"sign-out-button" %>
+      <%= link_to "Shout", root_path, id:"shout-link" %>
       <%= form_tag :search, method: :get, id:"nav-form" do %>
         <%= text_field_tag :query %>
       <%= submit_tag "O", id:"nav-search-button" %>

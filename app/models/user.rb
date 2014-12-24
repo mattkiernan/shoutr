@@ -49,4 +49,9 @@ class User < ActiveRecord::Base
   def to_param
     username
   end
+
+  def not_followed_users
+    users = User.where.not(id: id)
+    users.where.not(id: followed_users)
+  end
 end
